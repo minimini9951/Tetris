@@ -158,9 +158,14 @@ void game_update(void)
 		game_object[0].x -= dx;
 	}
 
-	if (CP_Input_KeyDown(KEY_UP))
+	if (CP_Input_KeyTriggered(KEY_X) || CP_Input_KeyTriggered(KEY_UP))
 	{
-		standard_sec = 2;
+		// turn the block in clockwise
+	}
+
+	if (CP_Input_KeyTriggered(KEY_Z) || CP_Input_KeyTriggered(KEY_LEFT_CONTROL) || CP_Input_KeyTriggered(KEY_RIGHT_CONTROL))
+	{
+		// turn the block in counterclockwise
 	}
 
 	if (sec >= standard_sec)
