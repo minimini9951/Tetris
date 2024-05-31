@@ -7,6 +7,7 @@ struct GameObject
 	float x;
 	float y;
 	float size;
+	int block[4][4];
 	CP_Color color;
 	int num;
 };
@@ -30,6 +31,18 @@ void S_Shape(struct GameObject obj);
 void T_Shape(struct GameObject obj);
 
 void Z_Shape(struct GameObject obj);
+
+void Clock_Spin(struct GameObject obj);
+
+void Counter_Spin(struct GameObject obj);
+
+void Show_Next(struct GameObject obj);
+
+void Hold(struct GameObject obj);
+
+void Set_Block(struct GameObject obj);
+
+void Move_Block(struct GameObject obj);
 
 void game_init(void);
 
