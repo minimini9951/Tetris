@@ -269,6 +269,7 @@ void game_update(void)
 
 	float frame = CP_System_GetDt();
 	static float sec = 0;
+	static float count = 0;
 	sec += frame;
 	float standard_sec = 1;
 
@@ -293,8 +294,9 @@ void game_update(void)
 					}
 				}
 			}
+			count = 1;
 		}
-		else
+		else if (count <= 0)
 		{
 			game_object[0].y += 1;
 		}
